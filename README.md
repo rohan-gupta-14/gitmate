@@ -186,37 +186,37 @@ You'll be prompted to enter a GitHub repository URL. GitMate will:
 
 Enter any GitHub repository URL to begin analysis:
 
-![Repository Cloning and Parsing](assets/1%20final.png)
+![Repository Cloning and Parsing](backend/assets/1%20final.png)
 
 #### 2️⃣ Code Entity Extraction
 
 GitMate extracts all code entities with detailed information:
 
-![Entity Extraction](assets/2%20final.png)
+![Entity Extraction](backend/assets/2%20final.png)
 
 #### 3️⃣ LSP Enhancement
 
 Reference tracking and call hierarchy analysis:
 
-![LSP Enhancement](assets/3%20final.png)
+![LSP Enhancement](backend/assets/3%20final.png)
 
 #### 4️⃣ AI-Powered Analysis
 
 Each entity receives an intelligent description:
 
-![AI Analysis](assets/4%20final%20.png)
+![AI Analysis](backend/assets/4%20final%20.png)
 
 #### 5️⃣ Vector Store Creation
 
 Building the semantic search index:
 
-![Vector Store](assets/5%20final.png)
+![Vector Store](backend/assets/5%20final.png)
 
 #### 6️⃣ Interactive Chat
 
 Ask questions and get contextual answers:
 
-![Chat Interface](assets/6%20final.png)
+![Chat Interface](backend/assets/6%20final.png)
 
 ### Chat Commands
 
@@ -244,7 +244,7 @@ You: /calls main
 
 ## 🏗️ Architecture
 
-![GitMate Architecture](assets/WhatsApp%20Image%202025-12-30%20at%209.29.27%20PM.jpeg)
+![GitMate Architecture](backend/assets/WhatsApp%20Image%202025-12-30%20at%209.29.27%20PM.jpeg)
 
 ---
 
@@ -375,7 +375,7 @@ We welcome contributions from the community! Here's how you can help:
 
 <div align="center">
 
-**Sparsh Sharma** - Creator & Maintainer
+**Sparsh Singh** - Creator & Maintainer
 
 [![GitHub](https://img.shields.io/badge/GitHub-bigsparsh-181717?style=for-the-badge&logo=github)](https://github.com/bigsparsh)
 
