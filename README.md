@@ -215,47 +215,39 @@ Enter any GitHub repository URL to begin analysis. For example : ( https://githu
 | `/help`           | Show available commands            |
 | `/quit` or `exit` | Exit GitMate                       |
 
-### Example Queries
-
-```
-You: What does the main function do?
-You: Where should I add input validation?
-You: Explain the print_record function
-You: How does the search algorithm work?
-You: /refs db_init
-You: /calls main
-```
 
 ---
 
-## Architecture
+## ARCHITECTURE
 
-![GitMate Architecture](backend/assets/WhatsApp%20Image%202025-12-30%20at%209.29.27%20PM.jpeg)
+![Architecture](backend/assets/WhatsApp%20Image%202025-12-30%20at%209.29.27%20PM.jpeg)
 
 ---
 
 ## Project Structure
 
 ```
+
 gitmate/
 ├── backend/
-│   ├── main.py              # 🎯 CLI entry point & main application
-│   ├── lsp_client.py        # 🔗 LSP client implementations
-│   ├── pyproject.toml       # 📦 Project dependencies
-│   ├── tree-sitter-docs.md  # 📚 Tree-sitter documentation
-│   └── instructions.md      # 📝 Development instructions
-└── screenshots/             # 📸 Usage screenshots
+│   ├── assets/
+│   ├── instructions.md
+│   ├── lsp_client.py
+│   ├── main.py
+│   ├── pyproject.toml
+│   ├── tree-sitter-docs.md
+│   └── uv.lock
+└── README.md
+
 ```
 
 ---
 
-## Roadmap
-
-### Coming in v2.0 (Next Release)
+## FUTURE VISION
 
 <table>
 <tr>
-<td width="40%">
+<td width="50%">
 
 #### Beautiful Web Interface
 
@@ -300,26 +292,19 @@ gitmate/
 </tr>
 </table>
 
-### Future Vision
-
-- [ ] **VS Code Extension** - Inline code explanations
-- [ ] **GitHub Action** - Auto-generate onboarding docs
-- [ ] **Multi-repo Support** - Analyze entire organizations
-- [ ] **Custom LLM Support** - Local models, OpenAI, Anthropic
-- [ ] **Export to Markdown** - Generate documentation files
 
 ---
 
-## Contributing
+## CONTRIBUTION
 
 We welcome contributions from the community! Here's how you can help:
 
 ### Getting Started
 
 1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
+2. **Create** a feature branch (`git checkout -b feature/feature-name`)
+3. **Commit** your changes (`git commit -m 'Adding feature-name'`)
+4. **Push** to the branch (`git push origin feature/feature-name`)
 5. **Open** a Pull Request
 
 ### Guidelines
