@@ -19,16 +19,22 @@ _Onboarding to a new codebase shouldn't feel like deciphering ancient hieroglyph
 
 ## Description
 
-**GitMate** is an intelligent code exploration tool designed to help developers quickly understand and navigate unfamiliar codebases. Whether you're joining a new team, contributing to open source, or auditing code, GitMate acts as your personal AI assistant that has already read and understood every line of code.
+**GitMate** transforms the overwhelming experience of diving into a new repository into a guided, conversational journey. By combining code parsing and AI-powered understanding. It helps in quickly grasping what any codebase does and where to make changes.
 
 ### The Problem It Solves
 
-Starting with a new codebase is overwhelming:
+Ever cloned a repository and felt lost trying to understand the codebase ? It feels like being dropped into a maze blindfolded :
 
-- **Documentation is outdated or missing** - You're left guessing what functions actually do
-- **Finding where to make changes is hard** - "Where do I add this feature?"
-- **Understanding dependencies is complex** - "What calls this function? What does it call?"
-- **Onboarding takes weeks, not hours** - Valuable time spent deciphering instead of coding
+1. **Documentation is a myth**- READMEs are outdated, comments are scarce and you're left reverse engineering
+2. **Dependency chains are invisible**- You change one function and break three others because you couldn't see what calls what
+3. **Onboarding is measured in weeks**- New Team members spend their first month just trying to understand where things are and how they work
+4. **Open Source feels inaccessible**- You want to contribute but don't know where to start, what's safe to touch, or how components interact
+
+**Who struggles most ?**
+- New Developers joining teams or companies.
+- Open source contributors tackling their first PR.
+- Anyone inheriting legacy code without the original authors.
+
 
 ### ✨ The GitMate Solution
 
@@ -113,110 +119,90 @@ GitMate combines the power of **AST parsing**, **Language Server Protocol (LSP)*
 - **Ollama** - For local embeddings ([Install Ollama](https://ollama.ai/))
 - **UV** - Fast Python package manager ([Install UV](https://github.com/astral-sh/uv))
 
-### Step 1: Clone GitMate
+### STEP 1 : CLONE THE REPOSITORY
 
-```bash
+```zsh
+# Clone via HTTPS
 git clone https://github.com/bigsparsh/gitmate.git
-cd gitmate/backend
+
+# Or clone via SSH (if you have ssh keys configured)
+git clone git@github.com:bigsparsh/gitmate.git
+
+# Go to the project directory
+cd gitmate
 ```
 
-### Step 2: Install Dependencies
+### STEP 2 : INSTALL DEPENDENCIES
 
-```bash
-# Using UV (recommended)
+```zsh
+# Using pip
+pip install -e
+
+# Or Using UV (recommended)
 uv sync
 
-# Or using pip
-pip install -e .
 ```
 
-### Step 3: Configure API Keys
+### STEP 3: CONFIGURE API KEYS
 
-```bash
-# Set your Groq API key (get one free at https://console.groq.com)
+```zsh
+# Set your Groq API Key
 export GROQ_API_KEY=your_groq_api_key
 
-# Or create a .env file
-echo "GROQ_API_KEY=your_groq_api_key" > .env
 ```
 
-### Step 4: Pull Embedding Model
+### STEP 4: PULL THE EMBEDDED MODEL
 
-```bash
-# Pull the embedding model (one-time setup)
+```zsh
+# Pull the embedding model
 ollama pull nomic-embed-text
 ```
 
-### Optional: LSP Setup
+### STEP 5: LSP SETUP (OPTIONAL)
 
-For enhanced reference tracking and call hierarchy features:
-
-```bash
+This step is optional it is used for enhanced tracking and call hierarchy features :
+```zsh
 # For C/C++ support
-sudo apt install clangd                    # Ubuntu/Debian
-brew install llvm                          # macOS
-
-# For TypeScript/TSX support
-npm install -g typescript-language-server typescript
+sudo apt install clangd    #UBUNTU/DEBIAN
+sudo pacman -S clang       #Arch Linux
+brew install llvm          #macOS
 ```
-
 ---
 
 ## Usage
 
-### Quick Start
+### Starting GitMate
 
-```bash
-# Run GitMate
+```zsh
 python main.py
 ```
+![GitMate Running](backend/assets/1%20final.png)
 
-You'll be prompted to enter a GitHub repository URL. GitMate will:
+You'll be prompted to enter Github Repo URL. After that GitMate will:
 
-1.  Clone the repository to `/tmp/gitmate/`
-2.  Parse all source files using Tree-sitter
-3.  Initialize LSP servers (if available)
-4.  Analyze each entity with AI
-5.  Build the vector store
-6.  Enter interactive chat mode
+1. Clone the repository to `/tmp/gitmate/`
 
-### Screenshots Walkthrough
+Enter any GitHub repository URL to begin analysis. For example : ( https://github.com/bigsparsh/bgdb.git )
 
-#### 1️ Repository Analysis
+2. Using Tree-sitter GitMate will parse through all the source files and it will also initialize the LSP Server (if available)
 
-Enter any GitHub repository URL to begin analysis:
+![Extracting and initializing](backend/assets/2%20final.png)
 
-![Repository Cloning and Parsing](backend/assets/1%20final.png)
+3. AI will start analyzing and generating each entity signatures of function, variables and macros
 
-#### 2️ Code Entity Extraction
+![Analyzing](backend/assets/3%20final.png)
 
-GitMate extracts all code entities with detailed information:
-
-![Entity Extraction](backend/assets/2%20final.png)
-
-#### 3️ LSP Enhancement
-
-Reference tracking and call hierarchy analysis:
-
-![LSP Enhancement](backend/assets/3%20final.png)
-
-#### 4️ AI-Powered Analysis
-
-Each entity receives an intelligent description:
+4. Result of the AI analysis
 
 ![AI Analysis](backend/assets/4%20final%20.png)
 
-#### 5️ Vector Store Creation
-
-Building the semantic search index:
+5. Creating of the Vector Store
 
 ![Vector Store](backend/assets/5%20final.png)
 
-#### 6️ Interactive Chat
+6. Enter the Interactive Chat
 
-Ask questions and get contextual answers:
-
-![Chat Interface](backend/assets/6%20final.png)
+[Interactive chat session](backend/assets/6%20final.png)
 
 ### Chat Commands
 
