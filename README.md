@@ -307,7 +307,7 @@ gitmate/
 
 ## CONTRIBUTION
 
-<img width="458" height="171" alt="image" src="https://github.com/user-attachments/assets/786e1bef-9464-458b-a93f-0c99aceffa4d" />
+<img width="513" height="204" alt="image" src="https://github.com/user-attachments/assets/e93bb0b1-ef95-4e6d-a1a1-6413499d8179" />
 
 ## INSPIRATION
 
