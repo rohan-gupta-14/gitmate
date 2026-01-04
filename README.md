@@ -307,46 +307,13 @@ gitmate/
 
 ## CONTRIBUTION
 
-We welcome contributions from the community! Here's how you can help:
-
-### Getting Started To Contribute
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/feature-name`)
-3. **Commit** your changes (`git commit -m 'Adding feature-name'`)
-4. **Push** to the branch (`git push origin feature/feature-name`)
-5. **Open** a Pull Request
-
-### Guidelines To Follow
-
-- Follow **PEP 8** for Python code style
-- Write **docstrings** for all functions and classes
-- Add **tests** for new functionality
-- Update **documentation** as needed
-- Keep commits **atomic** and write **descriptive** messages
-
-### Areas We Need Help In
-
-- Bug fixes and resolve issues
-- Improvements in Documentation
-- Language support additions
-- Feature Suggestions
+<img width="458" height="171" alt="image" src="https://github.com/user-attachments/assets/786e1bef-9464-458b-a93f-0c99aceffa4d" />
 
 ## INSPIRATION
 
 - Every developer who struggled with a new codebase
 - The open-source community's commitment to accessibility
 - The vision of AI-augmented development
-
----
-
-## CONTACT
-
-<div align="center">
-
-**Sparsh Singh** - Creator & Maintainer
-
-[![GitHub](https://img.shields.io/badge/GitHub-bigsparsh-181717?style=for-the-badge&logo=github)](https://github.com/bigsparsh)
 
 ---
 
